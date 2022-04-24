@@ -46,19 +46,17 @@ $().ready(() => {
         window.localStorage.setItem("allUsers", JSON.stringify(createNewUsers));
         window.location.href = "./home.html";
       } else {
-        for (user of allUsers) {
-          if (user.email === userData.email) {
-            $("#email").next().text("email already exist");
-          } else {
-            $("#email").next().text("");
-            allUsers.push(userData);
-            window.localStorage.setItem(
-              "currentUser",
-              JSON.stringify(userData)
-            );
-            window.localStorage.setItem("allUsers", JSON.stringify(allUsers));
-            window.location.href = "./home.html";
-          }
+        const checkUser = allUsers.filter(
+          (user) => user.email === userData.email
+        );
+        if (checkUser.length > 0) {
+          $("#email").next().text("email already exist");
+        } else {
+          $("#email").next().text("");
+          allUsers.push(userData);
+          window.localStorage.setItem("currentUser", JSON.stringify(userData));
+          window.localStorage.setItem("allUsers", JSON.stringify(allUsers));
+          window.location.href = "./home.html";
         }
       }
     }
