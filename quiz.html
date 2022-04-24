@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+    <title>Quiz</title>
+  </head>
+  <body id="mode">
+    <section>
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="./Assets/quizIt_Logo.png" />
+          </div>
+          <ul class="nav_element">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li id="moon"><i class="fa-solid fa-moon"></i></li>
+            <li id="sun"><i class="fa-solid fa-sun"></i></li>
+            <li id="user">
+              <a href="./login_registration.html" id="login">Login</a>
+              <a href="./login_registration.html" id="logout">Logout</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+      <main class="quiz_page">
+        <section class="test_wrapper">
+          <div class="test_header">
+            <span class="time_limit">Time:0:00:30</span>
+          </div>
+          <div class="instructions">
+            <div class="left">
+              <span class="tester"> Hello</span>
+              <h2 id="inst_header"></h2>
+              <p>Instructions</p>
+              <ul>
+                <li>This is a timed test</li>
+                <li>Its consist of multiple choice question</li>
+                <li>Select the right answer and click next</li>
+                <li>Click submit when done</li>
+                <li>
+                  If time runs out before you finish, the test will
+                  automatically submit for you
+                </li>
+              </ul>
+              <button class="start_test" id="startTest">Start Test</button>
+            </div>
+            <div class="right">
+              <img id="test_img" src="./Assets/sql_logo.png" alt="logo" />
+            </div>
+          </div>
+          <div class="test_form">
+            <form>
+              <p id="question"></p>
+              <div>
+                <input id="option_one" type="radio" name="options" />
+                <label></label>
+              </div>
+              <div>
+                <input id="option_two" type="radio" name="options" />
+                <label></label>
+              </div>
+              <div>
+                <input id="option_three" type="radio" name="options" />
+                <label></label>
+              </div>
+              <div>
+                <input id="option_four" type="radio" name="options" />
+                <label></label>
+              </div>
+              <input id="submit" type="submit" value="Next" />
+              <div id="error"></div>
+            </form>
+            <label for="progress">Your Progress</label>
+            <progress id="progress" value="0" max=""></progress>
+          </div>
+          <div class="test_result"></div>
+        </section>
+      </main>
+    </section>
+    <aside class="mobile">
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i> <span>Close</span>
+      </div>
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <a href="./login_registration.html" id="logout">Logout</a>
+        </li>
+      </ul>
+    </aside>
+    <footer>
+      <div class="container">
+        <div>QUIZ_IT</div>
+        <p>
+          A web application to test Your knowledge on Simple web development
+          technologies
+        </p>
+      </div>
+      <div class="container">
+        <div>External Links</div>
+        <ul>
+          <li>
+            <span><i class="fa-brands fa-instagram"></i></span
+            ><span>https:instagram.com/shophova</span>
+          </li>
+          <li>
+            <span><i class="fa-brands fa-twitter"></i></span
+            ><span>https:twitter.com/shophova</span>
+          </li>
+          <li>
+            <span><i class="fa-brands fa-tiktok"></i></span
+            ><span>https:tiktok.com/shophova</span>
+          </li>
+          <li>
+            <span><i class="fa-brands fa-facebook-square"></i></span
+            ><span>https:facebook.com/shophova</span>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <div>Contact Us</div>
+        <ul>
+          <li>
+            <span><i class="fa-solid fa-location-dot"></i></span
+            ><span>120 hamilton dr kitchener</span>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-location-dot"></i></span
+            ><span>120 yaba Lagos Nigeria</span>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-phone"></i></span
+            ><span>+234-8104782343</span>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-envelope"></i></span
+            ><span>enquires@shophova.com</span>
+          </li>
+        </ul>
+      </div>
+      <div class="container newsletter">
+        <label for="firstName"
+          >Join our newsletter and get access to exclusive deals</label
+        >
+        <input
+          name="firstName"
+          placeholder="Enter email address"
+          type="email"
+        />
+      </div>
+    </footer>
+  </body>
+</html>

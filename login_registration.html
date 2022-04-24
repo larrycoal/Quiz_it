@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Login</title>
+  </head>
+  <body class="login_body">
+    <main class="login_main">
+      <div class="login_wrapper">
+        <h2>LOGIN TO QUIZ IT</h2>
+        <form class="login_form">
+          <div>
+            <label>Username</label>
+            <input
+              type="email"
+              name="login_email"
+              placeholder="Enter your username"
+              id="login_email"
+              required
+            />
+          </div>
+          <div>
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              id="password"
+              required
+            />
+          </div>
+          <input type="submit" value="Login" id="login_btn" />
+          <span></span>
+        </form>
+        <p class="no_acct">
+          Don't have an account? <span id="register_page">Create one</span>
+        </p>
+      </div>
+      <div class="registration_wrapper">
+        <h2>CREATE AN ACCOUNT</h2>
+        <form class="registration_form">
+          <div>
+            <label for="username">Username</label>
+            <input
+              type="text"
+              placeholder="enter your username"
+              id="reg_username"
+            />
+            <span></span>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="enter your username"
+              id="email"
+              required
+            />
+            <span></span>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="enter your password"
+              id="reg_password"
+              required
+            />
+            <span></span>
+          </div>
+          <div>
+            <label>Verify Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              id="verify_password"
+              required
+            />
+            <span></span>
+          </div>
+          <input type="submit" value="Register" />
+        </form>
+        <p class="acct">
+          Already have an account? <span id="login_page">Login</span>
+        </p>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="login.js"></script>
+  </body>
+</html>

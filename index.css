@@ -1,0 +1,495 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  font-family: "Rubik", sans-serif;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  transition: all ease-in 1s;
+}
+#mode {
+  background-color: #12141c;
+  color: white;
+
+  position: relative;
+}
+header {
+  width: 100%;
+  padding: 1rem 3rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  flex-grow: 1;
+}
+.logo img {
+  height: 45px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.3rem;
+  align-items: center;
+}
+nav #user {
+  padding: 5px 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+#user a {
+  color: black;
+}
+#user i {
+  color: #d52d2d;
+}
+#logout {
+  display: none;
+}
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+#sun {
+  display: none;
+}
+nav i {
+  cursor: pointer;
+}
+main {
+  height: fit-content;
+  width: 100%;
+
+  padding: 6rem 2rem;
+}
+aside {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  right: 0;
+  background-color: #1e2028;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in 0.3s;
+  display: none;
+}
+aside div {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #6c7379;
+  padding: 0 10px;
+}
+aside div i {
+  margin-right: 5px;
+}
+aside ul {
+  list-style: none;
+}
+aside ul li {
+  padding: 15px 12px;
+  border-bottom: 1px solid #6c7379;
+}
+aside ul a {
+  color: #6c7379;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.hero_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  min-height: 80vh;
+}
+.hero_wrapper .hero_left {
+  text-align: center;
+}
+.hero_left h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.hero_left p {
+  font-size: 3rem;
+}
+.hero_left span {
+  color: #d52d2d;
+  font-weight: bold;
+}
+
+.all_test {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 5rem 2rem;
+  margin: 2rem;
+}
+
+.all_test h2 {
+  flex-grow: 1;
+  width: 100%;
+  text-align: center;
+  color: #d52d2d;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.all_test div {
+  background-color: #1e2028;
+  width: 40%;
+  padding: 3rem 2rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.all_test div:hover {
+  box-shadow: 1px 2px 30px rgb(41, 40, 40);
+}
+.team {
+  margin: 2rem;
+}
+.team h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.team p {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  line-height: 35px;
+}
+.team .stacks {
+  display: flex;
+  gap: 20px;
+  width: 200px;
+  color: #6c7379;
+  margin-top: 1rem;
+}
+.members img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 2px solid #d52d2d;
+}
+.members div {
+  display: flex;
+  /* color: white; */
+  align-items: center;
+}
+.members div div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.members div div p:nth-child(1) {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.members div div p:nth-child(2) {
+  font-size: 1.3rem;
+  color: rgb(209, 201, 201);
+}
+
+/* 
+=============================
+Quiz Page
+=============================
+*/
+.quiz_page {
+  display: flex;
+  padding: 0;
+  height: 90vh;
+  justify-content: center;
+}
+.side_menu {
+  width: 200px;
+  /* background-color: #12141c; */
+  color: white;
+}
+.side_menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 18px;
+  list-style: none;
+}
+.side_menu ul li {
+  cursor: pointer;
+}
+.test_wrapper {
+  flex-grow: 1;
+  padding: 0 2rem;
+}
+.test_wrapper ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.2rem;
+}
+.test_header {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+.instructions {
+  display: flex;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+  justify-self: left;
+}
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.instructions p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.instructions button {
+  width: 150px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.test_form {
+  width: 50%;
+  display: none;
+}
+.test_form p {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.test_form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+form #submit {
+  width: 150px;
+  padding: 10px;
+  color: #d52d2d;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.test_result {
+  display: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+#inst_header {
+  text-transform: uppercase;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(231, 223, 223);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.container {
+  flex-grow: 1;
+}
+.container p {
+  width: 200px;
+}
+.container div:nth-child(1) {
+  font-size: 1.3rem;
+  margin: 10px 0px;
+}
+.container ul {
+  list-style: none;
+}
+.container ul li {
+  margin: 10px 5px;
+}
+.container i {
+  margin: 0px 5px;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+}
+.newsletter label {
+  margin: 10px 0px;
+  font-size: 14px;
+}
+.newsletter input {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #6c7379;
+  outline: none;
+  color: white;
+}
+#progress {
+  background-color: #d52d2d;
+}
+/* 
+=============================
+Login Page
+=============================
+*/
+.login_main {
+  background-color: #1e2028;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.login_wrapper,
+.registration_wrapper {
+  background-color: white;
+  width: 450px;
+  height: fit-content;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0px 3px 30px #692020;
+}
+.login_wrapper h2,
+.registration_wrapper h2 {
+  margin: 1rem 0;
+  color: #d52d2d;
+  text-align: center;
+}
+.login_wrapper form,
+.registration_wrapper form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+.login_wrapper form div,
+.registration_wrapper form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.login_wrapper form input,
+.registration_wrapper form input {
+  padding: 10px;
+  border: 1px solid #d52d2d;
+  border-radius: 5px;
+  outline: none;
+}
+.login_wrapper form label,
+.registration_wrapper form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.login_wrapper form span,
+.registration_wrapper form span {
+  font-weight: lighter;
+  color: #d52d2d;
+  font-size: 12px;
+}
+.login_wrapper form input[type="submit"],
+.registration_wrapper form input[type="submit"] {
+  width: 150px;
+  background-color: #12141c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.no_acct,
+.acct {
+  margin: 1rem 0;
+  text-align: center;
+}
+.no_acct span,
+.acct span {
+  color: #d52d2d;
+  cursor: pointer;
+}
+.registration_wrapper {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav_element {
+    display: none;
+  }
+  #logout {
+    display: inline;
+  }
+  .hamburger {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 5px;
+    width: 60px;
+  }
+  .hamburger span {
+    padding: 3px;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+  }
+  .hero_right img {
+    max-height: 150px;
+  }
+  .hero_wrapper {
+    min-height: 60vh;
+  }
+  .team p {
+    font-size: 1rem;
+  }
+  .all_test {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .all_test div {
+    width: 90%;
+    padding: 1rem 10px;
+    font-weight: 400;
+  }
+  .instructions .right {
+    display: none;
+  }
+  .instructions .left {
+    width: 100%;
+  }
+  header {
+    padding: 10px;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
